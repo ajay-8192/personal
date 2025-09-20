@@ -13,7 +13,7 @@ const Intro = () => {
                     <button className="border-2 border-[#F65F62] md:px-16 xl:px-8 py-2 rounded-md">Get in Touch</button>
                 </div>
             </div>
-            <Image loading="lazy" src={"/ajay.jpg"} alt="Ajay Chowdary" fetchPriority="high" title="Ajay Chowdary" quality={50} width={512} height={512} className="w-full md:w-2/5 md:p-0 aspect-square object-center object-cover md:rounded-lg" />
+            <Image src={"/ajay.jpg"} alt="Ajay Chowdary" fetchPriority="high" title="Ajay Chowdary" quality={50} width={512} height={512} className="w-full md:w-2/5 md:p-0 aspect-square object-center object-cover md:rounded-lg" />
         </section>
     )
 };
