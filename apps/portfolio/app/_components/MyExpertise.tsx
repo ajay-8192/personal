@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const MyExpertise = () => {
     return (
         <section id="expertise" className="max-w-screen-2xl w-full mx-auto backdrop-blur-lg saturate-100 py-10 px-6 md:py-14 md:px-16 xl:px-32 space-y-8 text-2xl">
@@ -10,9 +12,10 @@ const MyExpertise = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8">
                 <div>
                     <div className="flex gap-x-6 items-center mb-2">
-                        <span className="material-symbols-outlined text-6xl text-[#F65F62]">
+                        {/* <span className="material-symbols-outlined text-6xl text-[#F65F62]">
                             code
-                        </span>
+                        </span> */}
+                        <Image src={"/svgs/code.svg"} alt="Code" width={60} height={60} />
                         <h3 className="font-medium">Frontend Development</h3>
                     </div>
                     <p className="ml-[5.25rem]">
@@ -21,9 +24,10 @@ const MyExpertise = () => {
                 </div>
                 <div>
                     <div className="flex gap-x-6 items-center mb-2">
-                        <span className="material-symbols-outlined text-6xl text-[#F65F62]">
+                        {/* <span className="material-symbols-outlined text-6xl text-[#F65F62]">
                             dns
-                        </span>
+                        </span> */}
+                        <Image src={"/svgs/dns.svg"} alt="DNS" width={60} height={60} />
                         <h3 className="font-medium">Backend Development</h3>
                     </div>
                     <p className="ml-[5.25rem]">
@@ -32,9 +36,10 @@ const MyExpertise = () => {
                 </div>
                 <div>
                     <div className="flex gap-x-6 items-center mb-2">
-                        <span className="material-symbols-outlined text-6xl text-[#F65F62]">
+                        {/* <span className="material-symbols-outlined text-6xl text-[#F65F62]">
                             database
-                        </span>
+                        </span> */}
+                        <Image src={"/svgs/database.svg"} alt="Database" width={60} height={60} />
                         <h3 className="font-medium">Databases</h3>
                     </div>
                     <p className="ml-[5.25rem]">
@@ -43,9 +48,10 @@ const MyExpertise = () => {
                 </div>
                 <div>
                     <div className="flex gap-x-6 items-center mb-2">
-                        <span className="material-symbols-outlined text-6xl text-[#F65F62]">
+                        {/* <span className="material-symbols-outlined text-6xl text-[#F65F62]">
                             cloud
-                        </span>
+                        </span> */}
+                        <Image src={"/svgs/cloud.svg"} alt="Cloud" width={60} height={60} />
                         <h3 className="font-medium">Tools & Platforms</h3>
                     </div>
                     <p className="ml-[5.25rem]">

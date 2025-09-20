@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ThankYou = () => {
     return (
         <section id="thank-you" className="max-w-screen-2xl w-full mx-auto backdrop-blur-lg saturate-100 py-10 px-6 md:py-14 md:px-16 xl:px-32 space-y-8 text-2xl">
@@ -8,9 +10,10 @@ const ThankYou = () => {
             </p>
             <div className="rounded-lg bg-[#022349] p-6 space-y-4">
                 <div className="flex items-center gap-x-6">
-                    <span className="material-symbols-outlined text-[#8dd4fb]">
+                    {/* <span className="material-symbols-outlined text-[#8dd4fb]">
                         info
-                    </span>
+                    </span> */}
+                    <Image src={"/svgs/info.svg"} alt="Info" width={24} height={24} />
                     <h3 className="text-2xl font-medium">Ready to Collaborate?</h3>
                 </div>
                 <p className="ml-12">
