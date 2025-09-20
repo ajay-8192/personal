@@ -28,6 +28,7 @@ export default function RootLayout({
         <meta name="description"
           content="I am Ajay Chowdary Nelakurthy. Transforming innovative ideas into seamless, user-friendly web applications. As a Frontend-focused Full Stack Engineer with 4 years of experience, I bring a holistic approach to development, prioritising clean code and captivating design." />
 
+        <meta name="keywords" content="Ajay Chowdary Nelakurthy, Portfolio, Full Stack Engineer, Frontend Developer, Web Developer, React, JavaScript, TypeScript, Node.js, AWS, UI/UX, Software Engineer, Web Applications, Developer Portfolio, HTML5, CSS3, MongoDB, PostgreSQL, Docker, CI/CD, Next.js" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ajaychowdary.com/" />
         <meta property="og:title" content="Ajay Chowdary Nelakurthy | My Portfolio" />
