@@ -1,0 +1,28 @@
+FROM node:20-alpine AS deps
+WORKDIR /app
+COPY package.json package-lock.json* ./
+COPY apps/portfolio/package.json ./apps/portfolio/
+RUN npm install --legacy-peer-deps
+
+# Build stage
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+WORKDIR /app/apps/portfolio
+RUN npx nx build portfolio
+
+# Production image
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+
+# Copy only necessary files
+COPY --from=builder /app/apps/portfolio/next.config.js ./next.config.js
+COPY --from=builder /app/apps/portfolio/public ./public
+COPY --from=builder /app/apps/portfolio/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/apps/portfolio/package.json ./package.json
+
+EXPOSE 3000
+CMD ["npx", "next", "start"]
