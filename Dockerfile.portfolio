@@ -1,11 +1,11 @@
-FROM node:20-alpine AS deps
+FROM node:lts-alpine3.23 AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
 COPY apps/portfolio/package.json ./apps/portfolio/
 RUN npm install --legacy-peer-deps
 
 # Build stage
-FROM node:20-alpine AS builder
+FROM node:lts-alpine3.23 AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -13,7 +13,7 @@ WORKDIR /app/apps/portfolio
 RUN npx nx build portfolio
 
 # Production image
-FROM node:20-alpine AS runner
+FROM node:lts-alpine3.23 AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
